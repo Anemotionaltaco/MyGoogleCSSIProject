@@ -4,4 +4,4 @@ This project will be great for people that love discovering new music in genres 
 
 ## My Github Section
 
-Added on github
+Added on github and editted locallyb
