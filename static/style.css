@@ -148,9 +148,17 @@ padding: 30px;
 }
 
 #rnblist {
+  position: relative;
+  left: 960px;
+  bottom: 602px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+}
+/* #rnblist {
   box-shadow: 3px 3px #CCC9DC;
   color:#E3D985;
   border-color: black;
   text-shadow: 3px 3px #270722;
   font-family: 'Berkshire Swash', cursive;
-}
+} */
