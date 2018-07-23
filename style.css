@@ -1,0 +1,70 @@
+.gospelbackground {
+background-color: #E1EFE6;
+}
+
+
+.right {
+  position: absolute;
+  left:610px;
+  width: 300px;
+  padding: 10px;
+  top: 295px;
+
+}
+#gospelbox {
+    background-color: #EFCB68;
+    box-shadow: 3px 3px #000411;
+}
+.box {
+  padding: 85px;
+  border-radius: 10px;
+  width: 800px
+}
+
+.title {
+  font-size:90px;
+  position: relative;
+  left: -50px;
+  top: -50px;
+}
+
+#gospeltitle {
+  font-family: 'Fjalla One', sans-serif;
+  text-shadow: -2px 2px #FFF8F0;
+}
+.button {
+  padding: 4px;
+  border-radius: 15px;
+  font-size: 30px;
+}
+.gospelbutton {
+    text-shadow: 1px 4px #270722;
+    font-family: 'Pacifico', cursive;
+    border-color: #EFCB68;
+    background-color: #EFCB68;
+    color: white;
+}
+#gospelmessage {
+  font-family:'Pacifico', cursive;
+  color:black;
+}
+.messagearea {
+  padding: 50px;
+  font-size: 30px;
+}
+
+#gospelist {
+  background-color: E1EFE6;
+  box-shadow: 3px 3px black;
+  color: black;
+  border-color: black;
+}
+.playlist {
+  position: relative;
+  left: 1000px;
+  bottom: 400px;
+  margin: 2px;
+  width: 255px;
+  padding: 30px;
+
+}
