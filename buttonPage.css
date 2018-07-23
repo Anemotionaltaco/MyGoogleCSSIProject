@@ -9,38 +9,67 @@ h1 {
 .genres {
   padding: 60px 128px;
   font-size: 16px;
+  margin: 45px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   box-shadow: 5px 10px #888888;
+   border-radius: 12px;
+}
+
+.genres:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 #hiphop {
   font-family: 'Poor Story', cursive;
-  font-family: 'Indie Flower', cursive;
-}
 
+}
+#hiphop:hover {
+  background-color: brown;
+  color: white;
+}
 #rnb {
   font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
 }
-
+#rnb:hover {
+  background-color: yellow;
+  color: white;
+  font-style:bold;
+}
 #indie {
   font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
+}
+#indie:hover {
+  background-color: ;
+  color: white;
 }
 
 #gospel {
   font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
 }
+#gospel:hover {
+  background-color: red;
+  color: white;
+}
 
 #pop {
   font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
+}
+#pop:hover {
+  background-color: red;
+  color: white;
 }
 
 #jazz {
   font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
 }
-
-#example2 {
-    box-shadow: 5px 10px #888888;
+#jazz:hover {
+  background-color: red;
+  color: white;
 }
