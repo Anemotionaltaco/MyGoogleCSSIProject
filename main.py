@@ -32,7 +32,7 @@ jinja_current_directory = jinja2.Environment(
 #HANDLERS
 class GetMainPageHandler(webapp2.RequestHandler):
     def get(self):
-        main_page = jinja_current_directory.get_template("templates/buttonPage1.html")
+        main_page = jinja_current_directory.get_template("templates/buttonPage.html")
         params = {}
         params['genres'] = {
             'hiphop': 'Hip Hop!',
@@ -51,6 +51,8 @@ class GetGenreHandler(webapp2.RequestHandler):
             genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
         if genre == "jazz":
             genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
+        if genre == "indie":
+            genre_page = jinja_current_directory.get_template("templates/indiepage.html")
 
         self.response.out.write(genre_page.render())
 
