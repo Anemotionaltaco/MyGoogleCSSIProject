@@ -10,6 +10,9 @@ body.jazz {
  body.indie {
    background-color: #EAF9D9;
  }
+ body.hiphop {
+   background-color: #F6BD60;
+ }
 .right {
 position: absolute;
 left:610px;
@@ -32,6 +35,11 @@ box-shadow: 3px 3px #CCC9DC;
 }
 #rnbbox {
   background-color: #581908;
+  box-shadow: 3px 3px #000411;
+}
+
+#hiphopbox {
+  background-color: #E9190F;
   box-shadow: 3px 3px #000411;
 }
 
@@ -65,6 +73,11 @@ text-shadow: -2px 2px black;
 font-family: 'Fjalla One', sans-serif;
 text-shadow: -2px 2px #FFF8F0;
 }
+
+#hiphoptitle {
+font-family: 'Poor Story', cursive;
+text-shadow: -2px 2px #FFF8F0;
+}
 .button {
 padding: px;
 border-radius: 15px;
@@ -94,6 +107,10 @@ font-size: 30px;
   color: white;
   font-family: 'Berkshire Swash', cursive;
 }
+
+.hiphopbutton {
+  font-family: 'Poor Story', cursive;
+}
 #gospelmessage {
 font-family:'Pacifico', cursive;
 color:black;
@@ -106,6 +123,11 @@ font-family: 'Josefin Sans', sans-serif, italic;
 #rnbmessage {
   color: #E3D985;
   font-family: 'Berkshire Swash', cursive;
+}
+
+#hiphopmessage {
+  font-family: 'Poor Story', cursive;
+  color: #291F1E;
 }
 .messagearea {
 padding: 50px;
