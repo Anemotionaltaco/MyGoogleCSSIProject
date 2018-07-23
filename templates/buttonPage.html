@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Genre Page</title>
+  <link rel="stylesheet" type="text/css" href="static/buttonPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Limelight|Leckerli+One|Poor+Story|Berkshire+Swash|Sigmar+One|Reenie+Beanie|Special+Elite" rel="stylesheet">
+</head>
+<body>
+  <h1>Please select a Genre Below:</h1>
+  {% for key, value in genres.iteritems() %}
+  <button type="button" class="genres" id="{{key}}" onclick="handleGenreClick('{{key}}')">{{value}}</button>
+  {% endfor %}
+
+  <script type="text/javascript" src="static/scripts.js">
+
+  </script>
+</body>
+</html>
