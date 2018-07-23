@@ -4,43 +4,73 @@ body {
 
 h1 {
   background-color: white;
+  text-align: center;
 }
 
+/* p {
+  font-family: 'Sigmar One', cursive;
+} */
 .genres {
-  padding: 60px 128px;
-  font-size: 16px;
+  padding: 80px;
+  font-size: 24px;
+  font-style: bold;
+  margin: 70px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   box-shadow: 5px 10px #888888;
+   border-radius: 12px;
+}
+
+.genres:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 #hiphop {
   font-family: 'Poor Story', cursive;
-  font-family: 'Indie Flower', cursive;
-}
 
+}
+#hiphop:hover {
+  background-color: brown;
+  color: white;
+}
 #rnb {
-  font-family: 'Poor Story', cursive;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
-
+#rnb:hover {
+  background-color: #8B4513;
+  color: white;
+}
 #indie {
-  font-family: 'Poor Story', cursive;
-  font-family: 'Indie Flower', cursive;
+font-family: 'Special Elite', cursive;
+}
+#indie:hover {
+  background-color: #9BB1FF;
+  color: white;
 }
 
 #gospel {
-  font-family: 'Poor Story', cursive;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Leckerli One';
+}
+#gospel:hover {
+  background-color: #ffd700;
+  color: white;
 }
 
 #pop {
-  font-family: 'Poor Story', cursive;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Reenie Beanie', cursive;
+}
+#pop:hover {
+  background-color: #FF69B4
+;
+  color: white;
 }
 
 #jazz {
   font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
 }
-
-#example2 {
-    box-shadow: 5px 10px #888888;
+#jazz:hover {
+  background-color: #000080;
+  color: white;
 }
