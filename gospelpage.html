@@ -1,7 +1,8 @@
 <html>
   <head>
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-  <link href="gospelpage.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
     <script>
   function sendRequest(destinationUrl, callbackFunction, parameters) {
       var xmlHttp = new XMLHttpRequest();
@@ -65,19 +66,20 @@
     <style>
     </style>
   </head>
-  <body>
-    <div id = "background">
-      <div id = "box">
-      <div id="title">
+  <body class="gospelbackground">
+    <div>
+      <div class="box" id ="gospelbox">
+      <div class="title" id="gospeltitle">
          GOSPEL PAGE
       </div>
-      <input type="button" class="right button gospel"   value="Load Messages">
+      <input type="button" class="right button gospelbutton"   value="Load Messages">
       <br>
-      <input id="textfield"><input type="button" class="button gospel" value="send message" onclick="handleSend();">
+      <input id="textfield">
+      <input type="button" class="button gospelbutton" value="send message" onclick="handleSend();">
       </div>
-      <div id="messagearea">
+      <div class="messagearea" id="gospelmessage">
       Hey
-      <div class= "gospel playlist">
+      <div class= "gospelbackground playlist" id="gospelist">
       SONGS
       <ul>
         <li> milk</li>
