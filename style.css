@@ -1,6 +1,12 @@
 body.jazz {
    background-color: #2A2B2E;
  }
+ body.gospel {
+   background-color: #E1EFE6;
+ }
+ body.indie {
+   background-color: #EAF9D9;
+ }
 .right {
 position: absolute;
 left:610px;
@@ -18,6 +24,10 @@ top: 265px;
 background-color: #035E7B;
 box-shadow: 3px 3px #CCC9DC;
 }
+#indiebox {
+  background-color: #B7AD99;
+}
+
 .box {
 padding: 85px;
 border-radius: 10px;

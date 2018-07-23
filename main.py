@@ -26,7 +26,7 @@ import webapp2
 class GetMainPageHandler(webapp2.RequestHandler):
     def dispatch(self):
         result = {}
-        
+
 
 
 # class AddMessageHandler(webapp2.RequestHandler):
