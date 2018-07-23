@@ -8,7 +8,7 @@ body.jazz {
    background-color: #E1EFE6;
  }
  body.indie {
-   background-color: #EAF9D9;
+   background-color: #846A6A;
  }
 .right {
 position: absolute;
@@ -28,7 +28,8 @@ background-color: #035E7B;
 box-shadow: 3px 3px #CCC9DC;
 }
 #indiebox {
-  background-color: #B7AD99;
+  background-color: #839788;
+  box-shadow: 3px 3px #CCDAD1;
 }
 #rnbbox {
   background-color: #581908;
@@ -56,14 +57,17 @@ top: -50px;
 
 #jazztitle {
 font-family: 'Josefin Sans', sans-serif, italic;
-color: CCC9DC;
+color: #CCC9DC;
 text-shadow: -2px 2px black;
-
-
 }
 #gospeltitle {
 font-family: 'Fjalla One', sans-serif;
 text-shadow: -2px 2px #FFF8F0;
+}
+#indietitle {
+  font-family: 'Fredericka the Great', cursive;
+  color: #CCDAD1;
+  text-shadow: -2px 2px #73877B;
 }
 .button {
 padding: px;
@@ -94,6 +98,12 @@ font-size: 30px;
   color: white;
   font-family: 'Berkshire Swash', cursive;
 }
+.indiebutton {
+  font-family: 'Josefin Slab', serif;
+  background-color: #839788;
+  border-color: #839788;
+  text-shadow: 1px 2px #CCDAD1;
+}
 #gospelmessage {
 font-family:'Pacifico', cursive;
 color:black;
@@ -106,6 +116,11 @@ font-family: 'Josefin Sans', sans-serif, italic;
 #rnbmessage {
   color: #E3D985;
   font-family: 'Berkshire Swash', cursive;
+}
+#indiemessage {
+  color: #CCDAD1;
+  font-family: 'Fredericka the Great', cursive;
+  text-shadow: 1px 2px black;
 }
 .messagearea {
 padding: 50px;
@@ -120,9 +135,9 @@ text-shadow: 3px 3px #035E7B;
 font-family: 'Yellowtail', cursive;
 } */
 #jazzlist {
-position: relative;
+position: fixed;
 left: 960px;
-bottom: 512px;
+bottom: 392px;
 margin: 5px;
 width: 255px;
 padding: 30px;
@@ -139,9 +154,9 @@ padding: 30px;
 }
 
 #indielist {
-  position: relative;
+  position: fixed;
   left: 960px;
-  bottom: 602px;
+  bottom: 92px;
   margin: 5px;
   width: 255px;
   padding: 30px;

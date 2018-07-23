@@ -1,0 +1,112 @@
+body.jazz {
+   background-color: #2A2B2E;
+ }
+ body.gospel {
+   background-color: #E1EFE6;
+ }
+ body.indie {
+   background-color: #73877B;
+ }
+.right {
+position: absolute;
+left:610px;
+width: 300px;
+padding: 10px;
+top: 265px;
+
+}
+#gospelbox {
+ background-color: #EFCB68;
+ box-shadow: 3px 3px #000411;
+}
+
+#jazzbox {
+background-color: #035E7B;
+box-shadow: 3px 3px #CCC9DC;
+}
+#indiebox {
+  background-color: #B7AD99;
+}
+
+.box {
+padding: 85px;
+border-radius: 10px;
+width: 800px
+}
+
+.title {
+font-size:90px;
+position: relative;
+left: -50px;
+top: -50px;
+}
+
+#jazztitle {
+font-family: 'Josefin Sans', sans-serif, italic;
+color: CCC9DC;
+text-shadow: -2px 2px black;
+
+
+}
+#gospeltitle {
+font-family: 'Fjalla One', sans-serif;
+text-shadow: -2px 2px #FFF8F0;
+}
+.button {
+padding: px;
+border-radius: 15px;
+font-size: 30px;
+}
+.gospelbutton {
+ text-shadow: 1px 4px #270722;
+ font-family: 'Pacifico', cursive;
+ border-color: #EFCB68;
+ background-color: #EFCB68;
+ color: white;
+}
+
+.jazzbutton {
+ text-shadow: 1px 4px #270722;
+ font-family: 'Pacifico', cursive;
+ border-color: #035E7B;
+ background-color: #035E7B;
+ color: white;
+ font-family: 'Yellowtail', cursive;
+}
+#gospelmessage {
+font-family:'Pacifico', cursive;
+color:black;
+}
+
+#jazzmessage {
+color: #CCC9DC;
+font-family: 'Josefin Sans', sans-serif, italic;
+}
+.messagearea {
+padding: 50px;
+font-size: 30px;
+}
+
+#gospelist {
+
+box-shadow: 3px 3px black;
+color: black;
+border-color: black;
+}
+
+#jazzlist {
+box-shadow: 3px 3px #CCC9DC;
+color: CCC9DC;
+border-color: black;
+text-shadow: 3px 3px #035E7B;
+font-family: 'Yellowtail', cursive;
+}
+.playlist {
+position: relative;
+left: 1000px;
+bottom: 400px;
+margin: 2px;
+width: 255px;
+padding: 30px;
+
+}
