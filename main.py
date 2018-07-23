@@ -32,7 +32,7 @@ jinja_current_directory = jinja2.Environment(
 #HANDLERS
 class GetMainPageHandler(webapp2.RequestHandler):
     def get(self):
-        main_page = jinja_current_directory.get_template("templates/buttonPage1.html")
+        main_page = jinja_current_directory.get_template("templates/buttonPage.html")
         params = {}
         params['genres'] = {
             'hiphop': 'Hip Hop!',
