@@ -31,6 +31,12 @@ left: -50px;
 top: -50px;
 }
 
+#rnbtitle{
+  font-family: 'Berkshire Swash', cursive;
+  color: #E3D985;
+  text-shadow: -2px 2px #D6DBB2;
+}
+
 #jazztitle {
 font-family: 'Josefin Sans', sans-serif, italic;
 color: CCC9DC;
