@@ -1,6 +1,10 @@
 body.jazz {
    background-color: #2A2B2E;
  }
+
+ body.rnb {
+    background-color: #51291E;
+  }
  body.gospel {
    background-color: #E1EFE6;
  }
@@ -26,6 +30,11 @@ box-shadow: 3px 3px #CCC9DC;
 }
 #indiebox {
   background-color: #B7AD99;
+}
+
+#rnbbox {
+  background-color: #581908;
+  box-shadow: 3px 3px #000411;
 }
 
 .box {
@@ -84,9 +93,9 @@ font-size: 30px;
   text-shadow: 1px 4px #270722;
   font-family: 'Pacifico', cursive;
   border-color: #035E7B;
-  background-color: #035E7B;
+  background-color: #D6DBB2;
   color: white;
-  font-family: 'Yellowtail', cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
 #gospelmessage {
 font-family:'Pacifico', cursive;
@@ -97,10 +106,24 @@ color:black;
 color: #CCC9DC;
 font-family: 'Josefin Sans', sans-serif, italic;
 }
+
+#rnbmessage {
+  color: #E3D985;
+  font-family: 'Berkshire Swash', cursive;
+}
 .messagearea {
 padding: 50px;
 font-size: 30px;
 }
+
+#rnblist {
+  box-shadow: 3px 3px #CCC9DC;
+  color:#E3D985;
+  border-color: black;
+  text-shadow: 3px 3px #270722;
+  font-family: 'Berkshire Swash', cursive;
+}
+
 
 #gospelist {
 
@@ -111,7 +134,7 @@ border-color: black;
 
 #jazzlist {
 box-shadow: 3px 3px #CCC9DC;
-color: CCC9DC;
+color: #CCC9DC;
 border-color: black;
 text-shadow: 3px 3px #035E7B;
 font-family: 'Yellowtail', cursive;
