@@ -35,12 +35,12 @@ class GetMainPageHandler(webapp2.RequestHandler):
         main_page = jinja_current_directory.get_template("templates/buttonPage.html")
         params = {}
         params['genres'] = {
+            'gospel': 'Gospel!',
             'hiphop': 'Hip Hop!',
-            'rnb': 'R&B!',
             'indie': 'Indie!',
-            'pop': 'Pop!',
             'jazz': 'Jazz!',
-            'gospel': 'Gospel!'
+            'pop': 'Pop!',
+            'rnb': 'R&B!',
         }
         self.response.out.write(main_page.render(params))
 
@@ -49,10 +49,12 @@ class GetGenreHandler(webapp2.RequestHandler):
         genre = self.request.get("genre")
         if genre == "gospel":
             genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
-        if genre == "jazz":
-            genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
         if genre == "indie":
             genre_page = jinja_current_directory.get_template("templates/indiepage.html")
+        if genre == "jazz":
+            genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
+        if genre == "rnb":
+            genre_page = jinja_current_directory.get_template("templates/rnb.html")
 
         self.response.out.write(genre_page.render())
 
