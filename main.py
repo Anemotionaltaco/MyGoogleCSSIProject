@@ -2,8 +2,15 @@ from google.appengine.api import memcache
 from google.appengine.api import users
 
 import datetime
+import jinja2
 import json
+import os
 import webapp2
+
+jinja_current_directory = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
 #OBJECTS
 # class Message(object):
@@ -24,9 +31,27 @@ import webapp2
 
 #HANDLERS
 class GetMainPageHandler(webapp2.RequestHandler):
-    def dispatch(self):
-        result = {}
-        
+    def get(self):
+        main_page = jinja_current_directory.get_template("templates/buttonPage1.html")
+        params = {}
+        params['genres'] = {
+            'hiphop': 'Hip Hop!',
+            'rnb': 'R&B!',
+            'indie': 'Indie!',
+            'pop': 'Pop!',
+            'jazz': 'Jazz!',
+            'gospel': 'Gospel!'
+        }
+        self.response.out.write(main_page.render(params))
+
+class GetGenreHandler(webapp2.RequestHandler):
+    def get(self):
+        genre = self.request.get("genre")
+        if genre == "gospel":
+            genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
+
+        self.response.out.write(genre_page.render())
+
 
 
 # class AddMessageHandler(webapp2.RequestHandler):
@@ -105,7 +130,8 @@ def send_json(request_handler, props):
 #MAPPING
 app = webapp2.WSGIApplication([
     ("/", GetMainPageHandler),
-    # ("/add", AddMessageHandler),
+    ("/genre", GetGenreHandler),
+    # ("/gospel", GospelHandler),
     # ("/login", GetLoginUrlHandler),
     # ("/logout", GetLogoutUrlHandler),
     # ("/messages", GetMessageHandler),
