@@ -1,7 +1,5 @@
 # My CSSI Project
 
-This project will be great for people that love discovering new music in genres that they love
+This project will be great for people that love discovering new music in genres that they enjoy
 
-## My Github Section
 
-Added on github and editted locallyb
