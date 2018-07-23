@@ -5,6 +5,7 @@ body {
 h1 {
   background-color: white;
   text-align: center;
+  font-family: 'Limelight', cursive;
 }
 
 /* p {
@@ -19,6 +20,7 @@ h1 {
    transition-duration: 0.4s;
    box-shadow: 5px 10px #888888;
    border-radius: 12px;
+
 }
 
 .genres:hover {
@@ -28,12 +30,12 @@ h1 {
 
 #hiphop {
   font-family: 'Poor Story', cursive;
-
 }
 #hiphop:hover {
   background-color: brown;
   color: white;
 }
+
 #rnb {
   font-family: 'Berkshire Swash', cursive;
 }
@@ -41,6 +43,7 @@ h1 {
   background-color: #8B4513;
   color: white;
 }
+
 #indie {
 font-family: 'Special Elite', cursive;
 }
@@ -61,13 +64,11 @@ font-family: 'Special Elite', cursive;
   font-family: 'Reenie Beanie', cursive;
 }
 #pop:hover {
-  background-color: #FF69B4
-;
+  background-color: #FF69B4;
   color: white;
 }
 
 #jazz {
-  font-family: 'Poor Story', cursive;
   font-family: 'Indie Flower', cursive;
 }
 #jazz:hover {
