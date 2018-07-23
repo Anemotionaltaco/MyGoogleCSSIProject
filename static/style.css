@@ -93,26 +93,37 @@ padding: 50px;
 font-size: 30px;
 }
 
-#gospelist {
-
-box-shadow: 3px 3px black;
-color: black;
-border-color: black;
-}
-
-#jazzlist {
+/* #jazzlist {
 box-shadow: 3px 3px #CCC9DC;
 color: CCC9DC;
 border-color: black;
 text-shadow: 3px 3px #035E7B;
 font-family: 'Yellowtail', cursive;
-}
-.playlist {
+} */
+#jazzlist {
 position: relative;
-left: 1000px;
-bottom: 470px;
-margin: 2px;
+left: 960px;
+bottom: 512px;
+margin: 5px;
 width: 255px;
 padding: 30px;
 
+}
+
+#gospellist {
+  position: relative;
+  left: 960px;
+  bottom: 542px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+}
+
+#indielist {
+  position: relative;
+  left: 960px;
+  bottom: 620px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
 }
