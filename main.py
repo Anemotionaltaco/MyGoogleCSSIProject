@@ -55,6 +55,8 @@ class GetGenreHandler(webapp2.RequestHandler):
             genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
         if genre == "rnb":
             genre_page = jinja_current_directory.get_template("templates/rnbpage.html")
+        if genre == "hiphop":
+            genre_page = jinja_current_directory.get_template("templates/hiphoppage.html")
 
         self.response.out.write(genre_page.render())
 
