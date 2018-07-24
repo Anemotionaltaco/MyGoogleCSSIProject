@@ -13,6 +13,7 @@ body.jazz {
  body.hiphop {
    background-color: #F6BD60;
  }
+
 .right {
 position: absolute;
 left:610px;
@@ -76,13 +77,9 @@ text-shadow: -2px 2px #FFF8F0;
   font-family: 'Fredericka the Great', cursive;
   color: #CCDAD1;
   text-shadow: -2px 2px #73877B;
-
-#hiphoptitle {
-font-family: 'Poor Story', cursive;
-text-shadow: -2px 2px #FFF8F0;
 }
 .button {
-padding: px;
+padding: 5px;
 border-radius: 15px;
 font-size: 30px;
 }
@@ -115,7 +112,7 @@ font-size: 30px;
   background-color: #839788;
   border-color: #839788;
   text-shadow: 1px 2px #CCDAD1;
-
+}
 .hiphopbutton {
   font-family: 'Poor Story', cursive;
 }
@@ -136,6 +133,7 @@ font-family: 'Josefin Sans', sans-serif, italic;
 #hiphopmessage {
   font-family: 'Poor Story', cursive;
   color: #291F1E;
+}
 #indiemessage {
   color: #CCDAD1;
   font-family: 'Fredericka the Great', cursive;
@@ -154,19 +152,19 @@ text-shadow: 3px 3px #035E7B;
 font-family: 'Yellowtail', cursive;
 } */
 #jazzlist {
-position: fixed;
-left: 960px;
-bottom: 392px;
-margin: 5px;
-width: 255px;
-padding: 30px;
+  position: fixed;
+  left: 960px;
+  bottom: 400px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
 
 }
 
 #gospellist {
-  position: relative;
+  position: fixed;
   left: 960px;
-  bottom: 542px;
+  bottom: 92px;
   margin: 5px;
   width: 255px;
   padding: 30px;
@@ -182,7 +180,7 @@ padding: 30px;
 }
 
 #rnblist {
-  position: relative;
+  position: fixed;
   left: 960px;
   bottom: 602px;
   margin: 5px;
