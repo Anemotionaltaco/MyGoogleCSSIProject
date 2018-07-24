@@ -13,6 +13,9 @@ body.jazz {
  body.hiphop {
    background-color: #F6BD60;
  }
+ body.pop {
+   background-color: #F49390;
+ }
  ul.gospelbar {
     background-color: #E1EFE6;
 
@@ -94,6 +97,11 @@ box-shadow: 3px 3px #CCC9DC;
   box-shadow: 3px 3px #000411;
 }
 
+#popbox {
+  background-color: #E40066;
+  box-shadow: 3px 3px #000411;
+}
+
 .box {
 padding: 85px;
 border-radius: 10px;
@@ -107,6 +115,10 @@ left: -50px;
 top: -50px;
 }
 
+#hiphoptitle {
+  font-family: 'Poor Story', cursive;
+  text-shadow: -2px 2px #D6DBB2;
+}
 #rnbtitle{
   font-family: 'Berkshire Swash', cursive;
   color: #E3D985;
@@ -127,6 +139,11 @@ text-shadow: -2px 2px #FFF8F0;
   font-family: 'Fredericka the Great', cursive;
   color: #CCDAD1;
   text-shadow: -2px 2px #73877B;
+}
+#poptitle {
+  color: #F0E68C;
+  text-shadow: -2px 2px black;
+  font-family: 'Reenie Beanie', cursive;
 }
 .button {
 padding: 5px;
@@ -172,6 +189,13 @@ background-color: transparent;
 .gospelmessage {
 font-family:'Pacifico', cursive;
 color: #270722;
+}
+
+.popbutton {
+  font-family: 'Reenie Beanie', cursive;
+  color: #F0E68C;
+  text-shadow: 1px 4px #270722;
+  background-color: black;
 }
 
 #jazzmessage {
