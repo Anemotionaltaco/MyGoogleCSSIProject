@@ -14,15 +14,19 @@ body.jazz {
    background-color: #F6BD60;
  }
  ul.gospelbar {
-    background-color: #270722;
-    border-radius: 15px;
+    background-color: #E1EFE6;
+
+ }
+ ul.indiebar {
+    background-color: #839788;
+
  }
 ul {
   list-style-type: none;
  margin: 0;
  padding: 0;
  overflow: hidden;
-
+border-radius: 15px;
  }
  li {
     float: left;
@@ -38,11 +42,15 @@ li a {
 }
 
 li.gospelbar a{
- color: #EFCB68;
+ color: #270722;
  font-family: 'Fjalla One', sans-serif;
- background-color: #270722;
+ background-color: #E1EFE6;
 }
 
+li.indiebar a{
+ color: black;
+  font-family: 'Josefin Slab', serif;
+}
 .right {
 position: absolute;
 left:610px;
@@ -52,8 +60,8 @@ top: 345px;
 
 }
 #gospelbox {
- background-color: #EFCB68;
- box-shadow: 3px 3px #000411;
+ background: linear-gradient( rgba(255,0,0,0), lightgray);
+ /* box-shadow: 3px 3px #000411; */
 }
 
 #jazzbox {
@@ -114,11 +122,14 @@ border-radius: 15px;
 font-size: 30px;
 }
 .gospelbutton {
- text-shadow: 1px 4px #270722;
+ text-shadow: 1px 4px white;
  font-family: 'Pacifico', cursive;
- border-color: #EFCB68;
- background-color: #EFCB68;
- color: white;
+ background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+background-color: transparent;
+    outline:none;
+ color: 270722;
 }
 
 .jazzbutton {
@@ -203,7 +214,7 @@ font-family: 'Yellowtail', cursive;
 #indielist {
   position: fixed;
   left: 960px;
-  bottom: 92px;
+  bottom: 52px;
   margin: 5px;
   width: 255px;
   padding: 30px;
