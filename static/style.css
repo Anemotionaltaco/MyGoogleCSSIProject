@@ -13,13 +13,34 @@ body.jazz {
  body.hiphop {
    background-color: #F6BD60;
  }
+li {
+     list-style-type: none;
+       margin: -5px;
+       overflow: hidden;
+       border-radius: 15px;
+      display: inline-block;
+ }
+li a {
+  display: block;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+padding-right: 20px;
+
+}
+
+li.gospelbar a{
+ color: #EFCB68;
+ font-family: 'Fjalla One', sans-serif;
+ background-color: #270722;
+}
 
 .right {
 position: absolute;
 left:610px;
 width: 300px;
 padding: 10px;
-top: 265px;
+top: 345px;
 
 }
 #gospelbox {
@@ -70,6 +91,7 @@ color: #CCC9DC;
 text-shadow: -2px 2px black;
 }
 #gospeltitle {
+color: #270722;
 font-family: 'Fjalla One', sans-serif;
 text-shadow: -2px 2px #FFF8F0;
 }
@@ -116,9 +138,9 @@ font-size: 30px;
 .hiphopbutton {
   font-family: 'Poor Story', cursive;
 }
-#gospelmessage {
+.gospelmessage {
 font-family:'Pacifico', cursive;
-color:black;
+color: #270722;
 }
 
 #jazzmessage {
@@ -164,7 +186,7 @@ font-family: 'Yellowtail', cursive;
 #gospellist {
   position: fixed;
   left: 960px;
-  bottom: 92px;
+  bottom: 42px;
   margin: 5px;
   width: 255px;
   padding: 30px;
