@@ -21,12 +21,15 @@ body.jazz {
 
  }
  ul.indiebar {
-    background-color: #839788;
+    background-color: #846A6A;
 
  }
  ul.hiphopbar {
    background-color: #270722;
    border-radius: 15px;
+ }
+ ul.jazzbar {
+   background-color: #2A2B2E
  }
 ul {
   list-style-type: none;
@@ -57,6 +60,7 @@ li.gospelbar a{
 li.indiebar a{
  color: black;
   font-family: 'Josefin Slab', serif;
+
 }
 
 li.hiphopbar a{
@@ -64,7 +68,10 @@ li.hiphopbar a{
  font-family: 'Poor Story', cursive;
  background-color: #270722;
 }
-
+li.jazzbar a {
+color: #CCC9DC;
+font-family: 'Josefin Sans', sans-serif, italic;
+}
 
 .right {
 position: absolute;
@@ -80,12 +87,12 @@ top: 345px;
 }
 
 #jazzbox {
-background-color: #035E7B;
-box-shadow: 3px 3px #CCC9DC;
+background: linear-gradient( rgba(255,0,0,0), #4a4c51);
+/* box-shadow: 3px 3px #CCC9DC; */
 }
 #indiebox {
-  background-color: #839788;
-  box-shadow: 3px 3px #CCDAD1;
+background: linear-gradient( rgba(255,0,0,0), #9e8080);
+  /* box-shadow: 3px 3px #CCDAD1; */
 }
 #rnbbox {
   background-color: #581908;
@@ -149,6 +156,11 @@ text-shadow: -2px 2px #FFF8F0;
 padding: 5px;
 border-radius: 15px;
 font-size: 30px;
+background-repeat:no-repeat;
+   border: none;
+   cursor:pointer;
+background-color: transparent;
+   outline:none;
 }
 .gospelbutton {
  text-shadow: 1px 4px rgb(225, 239, 230);
@@ -163,10 +175,7 @@ background-color: transparent;
 
 .jazzbutton {
  text-shadow: 1px 4px #270722;
- font-family: 'Pacifico', cursive;
- border-color: #035E7B;
- background-color: #035E7B;
- color: white;
+ color: #CCC9DC;
  font-family: 'Yellowtail', cursive;
 }
 .rnbbutton {
@@ -179,9 +188,7 @@ background-color: transparent;
 }
 .indiebutton {
   font-family: 'Josefin Slab', serif;
-  background-color: #839788;
-  border-color: #839788;
-  text-shadow: 1px 2px #CCDAD1;
+
 }
 .hiphopbutton {
   font-family: 'Poor Story', cursive;
@@ -231,7 +238,7 @@ font-family: 'Yellowtail', cursive;
 #jazzlist {
   position: fixed;
   left: 960px;
-  bottom: 400px;
+  bottom: 355px;
   margin: 5px;
   width: 255px;
   padding: 30px;
