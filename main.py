@@ -49,14 +49,17 @@ class GetGenreHandler(webapp2.RequestHandler):
         genre = self.request.get("genre")
         if genre == "gospel":
             genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
+        if genre == "hiphop":
+            genre_page = jinja_current_directory.get_template("templates/hiphoppage.html")
         if genre == "indie":
             genre_page = jinja_current_directory.get_template("templates/indiepage.html")
         if genre == "jazz":
             genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
+        if genre == pop":
+            genre_page = jinja_current_directory.get_template("templates/poppage.html")
         if genre == "rnb":
             genre_page = jinja_current_directory.get_template("templates/rnbpage.html")
-        if genre == "hiphop":
-            genre_page = jinja_current_directory.get_template("templates/hiphoppage.html")
+
 
         self.response.out.write(genre_page.render())
 
