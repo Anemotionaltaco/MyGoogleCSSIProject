@@ -3,8 +3,8 @@
 
 <head>
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="394728815913-92g7dreue9r7qes7vibt2i8c9ch1or4s.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="394728815913-nuh9usp5qa80v949p0j3jmq63ake8i72.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>Genre Page</title>
   <link rel="stylesheet" type="text/css" href="static/buttonPage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,29 +12,50 @@
 </head>
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
+  <button id="signout" type="button" name="button" href="#" onclick="signOut();" style="display: none">Sign Out</button>
 
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      };
-    </script>
   <h1><i class="fa fa-music"></i> Please select a Genre below <i class="fa fa-music"></i></h1>
   {% for key, value in genres.iteritems() %}
   <button type="button" class="genres" id="{{key}}" onclick="handleGenreClick('{{key}}')">{{value}}</button>
   {% endfor %}
 
-  <script type="text/javascript" src="static/scripts.js">
+  <script>
+    var isSignedIn = false;
 
+    function onSignIn(googleUser) {
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+
+      // The ID token you need to pass to your backend:
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+      isSignedIn = true;
+      document.getElementById('#signout').style.display="block"
+    }
+
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      })
+      isSignedIn = false;
+    }
+
+    function handleGenreClick(genre) {
+      if(isSignedIn) {
+        location.assign("/genre?genre=" + genre)
+      }
+      else {
+        alert("You need to sign in first.")
+      }
+    };
   </script>
+
 </body>
 </html>
