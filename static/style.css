@@ -207,6 +207,10 @@ background-color: transparent;
 }
 .hiphopbutton {
   font-family: 'Poor Story', cursive;
+  text-shadow: 1px 4px white;
+  border-color: #035E7B;
+  background-color: #F6BD60;
+
 }
 .gospelmessage {
 font-family:'Pacifico', cursive;
