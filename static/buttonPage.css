@@ -99,3 +99,28 @@ font-family: 'Special Elite', cursive;
     display: inline-block;
     font-size: 10px;
 }
+
+#signout span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#signout span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#signout:hover span {
+  padding-right: 25px;
+}
+
+#signout:hover span:after {
+  opacity: 1;
+  right: 0;
+}
