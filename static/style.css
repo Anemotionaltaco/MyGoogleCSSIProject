@@ -78,6 +78,15 @@ text-shadow: -2px 2px #FFF8F0;
   color: #CCDAD1;
   text-shadow: -2px 2px #73877B;
 }
+#hiphoptitle {
+  font-family: 'Poor Story', cursive;
+  color: black;
+  text-shadow: -2px 2px #FFEED6;
+}
+
+#poptitle {
+  font-family: 'Reenie Beanie', cursive;
+}
 .button {
 padding: 5px;
 border-radius: 15px;
@@ -115,6 +124,10 @@ font-size: 30px;
 }
 .hiphopbutton {
   font-family: 'Poor Story', cursive;
+  border-color: #035E7B;
+  background-color: #291F1E;
+  color: white;
+  text-shadow: 1px 4px #270722;
 }
 #gospelmessage {
 font-family:'Pacifico', cursive;
