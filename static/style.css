@@ -21,6 +21,10 @@ body.jazz {
     background-color: #839788;
 
  }
+ ul.hiphopbar {
+   background-color: #270722;
+   border-radius: 15px;
+ }
 ul {
   list-style-type: none;
  margin: 0;
@@ -51,6 +55,14 @@ li.indiebar a{
  color: black;
   font-family: 'Josefin Slab', serif;
 }
+
+li.hiphopbar a{
+ color: #E9190F;
+ font-family: 'Poor Story', cursive;
+ background-color: #270722;
+}
+
+
 .right {
 position: absolute;
 left:610px;
