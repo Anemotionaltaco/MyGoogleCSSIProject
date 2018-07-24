@@ -36,7 +36,7 @@
       var id_token = googleUser.getAuthResponse().id_token;
       console.log("ID Token: " + id_token);
       isSignedIn = true;
-      document.getElementById('#signout').style.display="block"
+      document.getElementById('signout').style.display="block"
     }
 
     function signOut() {
@@ -45,6 +45,7 @@
         console.log('User signed out.');
       })
       isSignedIn = false;
+      document.getElementById('signout').style.display="none"
     }
 
     function handleGenreClick(genre) {

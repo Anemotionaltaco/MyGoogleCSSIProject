@@ -88,3 +88,14 @@ font-family: 'Special Elite', cursive;
   background-color: #000080;
   color: white;
 }
+
+#signout {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 39.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
