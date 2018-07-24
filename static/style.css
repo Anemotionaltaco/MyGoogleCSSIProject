@@ -29,7 +29,11 @@ body.jazz {
    border-radius: 15px;
  }
  ul.jazzbar {
-   background-color: #2A2B2E
+   background-color: #2A2B2E;
+ }
+
+ ul.popbar {
+   background-color: #F0E68C	;
  }
 ul {
   list-style-type: none;
@@ -71,6 +75,11 @@ li.hiphopbar a{
 li.jazzbar a {
 color: #CCC9DC;
 font-family: 'Josefin Sans', sans-serif, italic;
+}
+
+li.popbar a{
+  font-family: 'Reenie Beanie', cursive;
+  color: black;
 }
 
 .right {
