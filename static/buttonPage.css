@@ -16,16 +16,29 @@ h1 {
   font-size: 24px;
   font-style: bold;
   margin: 70px;
+  margin-left: 100px;
   -webkit-transition-duration: 0.4s; /* Safari */
    transition-duration: 0.4s;
    box-shadow: 5px 10px #888888;
    border-radius: 12px;
+   transition: all 0.5s;
+  cursor: pointer;
 
 }
 
 .genres:hover {
     background-color: #4CAF50;
     color: white;
+    padding-right: 25px;
+}
+
+.genres:hover span {
+  padding-right: 25px;
+}
+
+.genres:hover span:after {
+  opacity: : 1;
+  right: 0;
 }
 
 #hiphop {
