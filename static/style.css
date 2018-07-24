@@ -13,19 +13,27 @@ body.jazz {
  body.hiphop {
    background-color: #F6BD60;
  }
-li {
-     list-style-type: none;
-       margin: -5px;
-       overflow: hidden;
-       border-radius: 15px;
-      display: inline-block;
+ ul.gospelbar {
+    background-color: #270722;
+    border-radius: 15px;
+ }
+ul {
+  list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+
+ }
+ li {
+    float: left;
  }
 li a {
   display: block;
- text-align: center;
- padding: 14px 16px;
- text-decoration: none;
-padding-right: 20px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-left: 100px;
 
 }
 
@@ -34,10 +42,6 @@ li.gospelbar a{
  font-family: 'Fjalla One', sans-serif;
  background-color: #270722;
 }
-
- body.pop {
-   background-color: #CF4D6F;
- }
 
 .right {
 position: absolute;
@@ -67,11 +71,6 @@ box-shadow: 3px 3px #CCC9DC;
 
 #hiphopbox {
   background-color: #E9190F;
-  box-shadow: 3px 3px #000411;
-}
-
-#popbox {
-  background-color: #F49390;
   box-shadow: 3px 3px #000411;
 }
 
@@ -108,18 +107,6 @@ text-shadow: -2px 2px #FFF8F0;
   font-family: 'Fredericka the Great', cursive;
   color: #CCDAD1;
   text-shadow: -2px 2px #73877B;
-}
-#hiphoptitle {
-  font-family: 'Poor Story', cursive;
-  color: black;
-  text-shadow: -2px 2px #FFEED6;
-}
-
-#poptitle {
-  font-family: 'Reenie Beanie', cursive;
-  color: #E40066;
-  text-shadow: -2px 2px #F49390;
-
 }
 .button {
 padding: 5px;
@@ -158,18 +145,6 @@ font-size: 30px;
 }
 .hiphopbutton {
   font-family: 'Poor Story', cursive;
-  border-color: #035E7B;
-  background-color: #291F1E;
-  color: white;
-  text-shadow: 1px 4px #270722;
-}
-
-.popbutton {
-  font-family: 'Reenie Beanie', cursive;
-  border-color: #F0E68C;
-  background-color: black;
-  color: white;
-  text-shadow: 1px 4px #F564A9;
 }
 .gospelmessage {
 font-family:'Pacifico', cursive;
@@ -193,10 +168,6 @@ font-family: 'Josefin Sans', sans-serif, italic;
   color: #CCDAD1;
   font-family: 'Fredericka the Great', cursive;
   text-shadow: 1px 2px black;
-}
-#popmessage {
-  color: #F0E68C;
-  font-family: 'Reenie Beanie', cursive;
 }
 .messagearea {
 padding: 50px;
