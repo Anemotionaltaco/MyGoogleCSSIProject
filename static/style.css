@@ -35,6 +35,10 @@ body.jazz {
  ul.popbar {
    background-color: #F0E68C	;
  }
+
+ul.rnbbar {
+  background-color: black;
+}
 ul {
   list-style-type: none;
  margin: 0;
@@ -81,7 +85,9 @@ li.popbar a{
   font-family: 'Reenie Beanie', cursive;
   color: black;
 }
-
+li.rnbbar a{
+  font-family: 'Berkshire Swash', cursive;
+}
 .right {
 position: absolute;
 left:610px;
@@ -232,6 +238,7 @@ font-family: 'Josefin Sans', sans-serif, italic;
   font-family: 'Fredericka the Great', cursive;
   text-shadow: 1px 2px black;
 }
+
 .messagearea {
 padding: 50px;
 font-size: 30px;
