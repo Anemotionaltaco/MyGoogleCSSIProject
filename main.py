@@ -51,6 +51,8 @@ class GetMainPageHandler(webapp2.RequestHandler):
 class GetGenreHandler(webapp2.RequestHandler):
     def get(self):
         genre = self.request.get("genre")
+        # genre_key = ndb.Key('Model', 'rnb')
+        # genre = genre_key.get()
         print(genre)
         if genre == "gospel":
             genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
@@ -65,12 +67,13 @@ class GetGenreHandler(webapp2.RequestHandler):
         if genre == "rnb":
             genre_page = jinja_current_directory.get_template("templates/rnbpage.html")
 
-            self.response.out.write(genre_page.render())
+        self.response.out.write(genre_page.render())
 
 class AddMessageHandler(webapp2.RequestHandler):
     def dispatch(self):
         result = {}
         # email = get_current_user_email()
+        genre = self.request.get("rnb")
         text = self.request.get("home")
         # Model.genre = self.request.get(genre)
         if len(text) > 500:
@@ -86,8 +89,10 @@ class AddMessageHandler(webapp2.RequestHandler):
             memcache.set("messages", messages)
             result["OK"] = True
 
-        m = Model(text=text)
+        m = Model(genre='rnb', text=text)
         m.put()
+
+        self.redirect("/genre?genre=rnb")
 
         # else:
         #     result["error"] = "User is not logged in."
