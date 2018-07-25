@@ -43,6 +43,7 @@ class GetMainPageHandler(webapp2.RequestHandler):
             'rnb': 'R&B!',
         }
         self.response.out.write(main_page.render(params))
+        print(users.get_current_user())
 
 class GetGenreHandler(webapp2.RequestHandler):
     def get(self):
@@ -63,29 +64,32 @@ class GetGenreHandler(webapp2.RequestHandler):
 
         self.response.out.write(genre_page.render())
 
+class SetUserDataHandler(webapp2.RequestHandler):
+    def dispatch(self):
 
 
-# class AddMessageHandler(webapp2.RequestHandler):
-#     def dispatch(self):
-#         result = {}
-#         email = get_current_user_email()
-#         if email:
-#             msg_text = self.request.get("text")
-#             if len(msg_text) > 500:
-#                 result["error"] = "Message is too long."
-#             elif not msg_text.strip():
-#                 result["error"] = "Message is empty."
-#             else:
-#                 messages = memcache.get("messages")
-#                 if not messages:
-#                     messages = []
-#                 msg = Message(email, msg_text)
-#                 messages.append(msg)
-#                 memcache.set("messages", messages)
-#                 result["OK"] = True
-#         else:
-#             result["error"] = "User is not logged in."
-#         send_json(self, result)
+
+class AddMessageHandler(webapp2.RequestHandler):
+    def dispatch(self):
+        result = {}
+        email = get_current_user_email()
+        if email:
+            msg_text = self.request.get("text")
+            if len(msg_text) > 500:
+                result["error"] = "Message is too long."
+            elif not msg_text.strip():
+                result["error"] = "Message is empty."
+            else:
+                messages = memcache.get("messages")
+                if not messages:
+                    messages = []
+                msg = Message(email, msg_text)
+                messages.append(msg)
+                memcache.set("messages", messages)
+                result["OK"] = True
+        else:
+            result["error"] = "User is not logged in."
+        send_json(self, result)
 #
 # class GetLoginUrlHandler(webapp2.RequestHandler):
 #     def dispatch(self):
@@ -142,6 +146,7 @@ def send_json(request_handler, props):
 app = webapp2.WSGIApplication([
     ("/", GetMainPageHandler),
     ("/genre", GetGenreHandler),
+    # ("/setUserData", SetUserDataHandler)
     # ("/gospel", GospelHandler),
     # ("/login", GetLoginUrlHandler),
     # ("/logout", GetLogoutUrlHandler),

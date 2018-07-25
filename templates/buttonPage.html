@@ -20,6 +20,32 @@
   {% endfor %}
 
   <script>
+  function sendRequest(destinationUrl, callbackFunction, parameters) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+      if (xmlHttp.readyState == 4) {
+        var result = JSON.parse(xmlHttp.responseText);
+        if (result.error) {
+          document.getElementById("error").innerHTML = result.error;
+        }
+        else {
+          document.getElementById("error").innerHTML = "";
+        }
+        callbackFunction(result);
+      }
+    }
+
+  var paramString = "";
+  for (var param in parameters) {
+    paramString += param + "=" + escape(parameters[param]) + "&";
+  }
+  xmlHttp.open("POST", destinationUrl);
+  xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  console.log("About to send:" + paramString);
+  console.log("Sending to " + destinationUrl);
+  xmlHttp.send(paramString);
+  }
+
     var isSignedIn = false;
 
     function onSignIn(googleUser) {
@@ -35,8 +61,11 @@
       // The ID token you need to pass to your backend:
       var id_token = googleUser.getAuthResponse().id_token;
       console.log("ID Token: " + id_token);
+      // sendRequest("/setUserData", function(result) {
+      //   console.log("Got result", result);
+      // }, {"id_token": id_token});
       isSignedIn = true;
-      document.getElementById('signout').style.display="block"
+      document.getElementById('signout').style.display="block";
     }
 
     function signOut() {
