@@ -97,6 +97,7 @@ class AddMessageHandler(webapp2.RequestHandler):
         # else:
         #     result["error"] = "User is not logged in."
 
+
 #
 # #DEFS
 # def get_current_user_email():
