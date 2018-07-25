@@ -2,6 +2,7 @@ from google.appengine.api import memcache
 from google.appengine.ext import ndb
 from google.appengine.api import users
 
+
 import datetime
 import jinja2
 import json
@@ -73,7 +74,7 @@ class AddMessageHandler(webapp2.RequestHandler):
     def dispatch(self):
         result = {}
         # email = get_current_user_email()
-        genre = self.request.get("rnb")
+        genre = self.request.get("genre")
         text = self.request.get("home")
         # Model.genre = self.request.get(genre)
         if len(text) > 500:
@@ -89,10 +90,11 @@ class AddMessageHandler(webapp2.RequestHandler):
             memcache.set("messages", messages)
             result["OK"] = True
 
-        m = Model(genre='rnb', text=text)
+        print(self.request.url)
+        m = Model(genre=genre, text=text)
         m.put()
 
-        self.redirect("/genre?genre=rnb")
+        self.redirect("/genre?genre=" + genre)
 
         # else:
         #     result["error"] = "User is not logged in."

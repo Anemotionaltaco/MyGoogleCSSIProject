@@ -8,6 +8,18 @@
     <style>
     </style>
   </head>
+
+  <script>
+  function handleGenreClick(genre) {
+    if(isSignedIn) {
+      location.assign("/genre?genre=" + genre)
+    }
+    else {
+      alert("You need to sign in first.")
+    }
+  };
+  </script>
+
   <body class="rnb">
     <div>
       <ul class="rnbbar">
@@ -25,13 +37,13 @@
       </div>
       <input type="button" class="right button rnbbutton"   value="Load Messages">
       <br>
-      <form class="messagearea" action="/add" method="post">
+      <form class="messagearea" action="/add?genre=rnb" method="post">
               <input name="home" id="textfield">
-              <input type="submit" class="button rnbbutton" value="send message">
+              <input id="rnb" type="submit" class="button rnbbutton" value="send message">
       </form>
       </div>
       <div class="messagearea" id="rnbmessage">
-
+        {{ messages }}
 
       <!-- <div class= "gospelbackground playlist" id="rnblist">
       SONG

@@ -3,7 +3,7 @@
 
 <head>
   <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="721956880539-msrnaq0epmmf6kpfvfh5nn76o1m8if93.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="394728815913-nuh9usp5qa80v949p0j3jmq63ake8i72.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>Genre Page</title>
   <link rel="stylesheet" type="text/css" href="static/buttonPage.css">
@@ -20,33 +20,8 @@
   {% endfor %}
 
   <script>
-  function sendRequest(destinationUrl, callbackFunction, parameters) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() {
-      if (xmlHttp.readyState == 4) {
-        var result = JSON.parse(xmlHttp.responseText);
-        if (result.error) {
-          document.getElementById("error").innerHTML = result.error;
-        }
-        else {
-          document.getElementById("error").innerHTML = "";
-        }
-        callbackFunction(result);
-      }
-    }
 
-  var paramString = "";
-  for (var param in parameters) {
-    paramString += param + "=" + escape(parameters[param]) + "&";
-  }
-  xmlHttp.open("POST", destinationUrl);
-  xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  console.log("About to send:" + paramString);
-  console.log("Sending to " + destinationUrl);
-  xmlHttp.send(paramString);
-  }
-
-    var isSignedIn = false;
+    var isSignedIn = true;
 
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
