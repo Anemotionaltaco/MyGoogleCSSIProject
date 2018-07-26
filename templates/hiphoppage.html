@@ -8,16 +8,40 @@
   <link href="static/style.css" rel="stylesheet">
 </head>
 <body class="hiphop">
-  <div>
-    <ul class="hiphopbar">
-      <li class="hiphopbar"><a href="/">HOME</a></li>
-      <li class="hiphopbar"><a href="/genre?genre=jazz">JAZZ</a></li>
-      <li class="hiphopbar"><a href="/genre?genre=indie">INDIE</a></li>
-      <li class="hiphopbar"><a href="/genre?genre=rnb">R&B</a></li>
-      <li class="hiphopbar"><a href="/genre?genre=gospel">GOSPEL</a></li>
-      <li class="hiphopbar"><a href="/genre?genre=pop">POP</a></li>
-      <li class="hiphopbar"><a href="/genre?genre=hiphop">HIP HOP</a></li>
+  <nav role="navigation">
+  <div id="menuToggle">
+  <!--
+  A fake / hidden checkbox is used as click reciever,
+  so you can use the :checked selector on it.
+  -->
+  <input type="checkbox" />
+
+  <!--
+  Some spans to act as a hamburger.
+
+  They are acting like a real hamburger,
+  not that McDonalds stuff.
+  -->
+  <span></span>
+  <span></span>
+  <span></span>
+
+  <!--
+  Too bad the menu has to be inside of the button
+  but hey, it's pure CSS magic.
+  -->
+  <ul class="pages" id="menu">
+    <li class="hiphopbar"><a href="/">HOME</a></li>
+    <li class="hiphopbar"><a href="/aboutus">ABOUT</a></li>
+    <li class="hiphopbar"><a href="/genre?genre=jazz">JAZZ</a></li>
+    <li class="hiphopbar"><a href="/genre?genre=indie">INDIE</a></li>
+    <li class="hiphopbar"><a href="/genre?genre=rnb">R&B</a></li>
+    <li class="hiphopbar"><a href="/genre?genre=gospel">GOSPEL</a></li>
+    <li class="hiphopbar"><a href="/genre?genre=pop">POP</a></li>
+    <li class="hiphopbar"><a href="/genre?genre=hiphop">HIP HOP</a></li>
   </ul>
+  </div>
+  </nav>
   <div class="box" id ="hiphopbox">
   <div class="title" id="hiphoptitle">
      HIP HOP PAGE

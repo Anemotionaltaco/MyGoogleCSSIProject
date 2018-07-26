@@ -52,7 +52,7 @@ class GetMainPageHandler(webapp2.RequestHandler):
 
 class GetAboutPageHandler(webapp2.RequestHandler):
     def get(self):
-        main_page = jinja_current_directory.get_template("templates/aboutusPage.html")
+        main_page = jinja_current_directory.get_template("templates/aboutus.html")
         self.response.out.write(main_page.render())
 
 class GetGenreHandler(webapp2.RequestHandler):
