@@ -78,19 +78,28 @@
       <li class="hiphopbar"><a href="/genre?genre=pop">POP</a></li>
       <li class="hiphopbar"><a href="/genre?genre=hiphop">HIP HOP</a></li>
   </ul>
-    <div class="box" id ="hiphopbox">
-    <div class="title" id="hiphoptitle">
-        HIPHOP PAGE
-    </div>
-    <input type="button" class="right button hiphopbutton" value="Load Messages">
-    <br>
-    <input id="textfield">
-    <input type="button" class="button hiphopbutton" value="send message" onclick="handleSend();">
+  <div class="box" id ="hiphopbox">
+  <div class="title" id="hiphoptitle">
+     HIP HOP PAGE
   </div>
-    <div class="messagearea" id="hiphopmessage">
-    Hey
-    </div>
+  <form action="/messages?genre=hiphop" method="post">
+    <input type="submit" class="right button hiphopbutton"  value="Load Messages">
+  </form>
+  <br>
+  <form class="messagearea" action="/add?genre=hiphop" method="post">
+          <input name="home" id="textfield">
+          <input id="hiphop" type="submit" class="button hiphopbutton" value="send message">
+
+  </form>
   </div>
+  <div class="messagearea" id="hiphopmessage">
+    {% for text in messages %}
+      <p>{{text}}</p>
+    {% endfor %}
+  <!-- <div class= "gospelbackground playlist" id="rnblist">
+  SONG
+  </div> -->
+</div>
   <div class= "playlist" id="gospellist">
 <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX7YCknf2jT6s" width="350" height="680" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
