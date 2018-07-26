@@ -409,9 +409,9 @@ font-family: 'Yellowtail', cursive;
 }
 
 #indielist {
-  position: fixed;
-  left: 960px;
-  bottom: 52px;
+  position: relative;
+  left: 70%;
+  bottom: 70%;
   margin: 5px;
   width: 255px;
   padding: 30px;
