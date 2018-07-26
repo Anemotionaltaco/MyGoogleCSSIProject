@@ -400,27 +400,34 @@ font-family: 'Yellowtail', cursive;
 }
 
 #gospellist {
-  position: fixed;
-  left: 960px;
-  bottom: 42px;
+  position: relative;
+  left: 70%;
+  bottom: 80%;
   margin: 5px;
   width: 255px;
   padding: 30px;
 }
-
 #indielist {
   position: relative;
   left: 70%;
-  bottom: 70%;
+  bottom: 80%;
   margin: 5px;
   width: 255px;
   padding: 30px;
 }
 
+#poplist {
+  position: relative;
+  left: 70%;
+  bottom: 800%;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+}
 #rnblist {
-  position: fixed;
-  left: 960px;
-  bottom: 602px;
+  position: relative;
+  left: 70%;
+  bottom: 80%;
   margin: 5px;
   width: 255px;
   padding: 30px;
