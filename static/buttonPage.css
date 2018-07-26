@@ -106,7 +106,7 @@ p {
 
 .left {
     left: 100px;
-        width: 900px;
+      width: 900px;
     color: black;
     /* background-image: url(../static/hey.png);
     background-size: cover; */
@@ -191,6 +191,42 @@ text-shadow: 3px 3px black;
   text-shadow: 3px 3px black;
 }
 
+#signout {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 39.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
+
+#signout span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#signout span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#signout:hover span {
+  padding-right: 25px;
+}
+
+#signout:hover span:after {
+  opacity: 1;
+  right: 0;
+} 
+
 
 /* .genres:hover {
     background-color: #4CAF50;
@@ -252,39 +288,3 @@ text-shadow: 3px 3px black;
   background-color: #000080;
   color: white;
 }
-
-#signout {
-    background-color: red; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 39.5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-}
-
-#signout span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#signout span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#signout:hover span {
-  padding-right: 25px;
-}
-
-#signout:hover span:after {
-  opacity: 1;
-  right: 0;
-} */
