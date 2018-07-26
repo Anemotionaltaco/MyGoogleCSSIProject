@@ -77,7 +77,7 @@ body {
 	100%{color: orange;}
 }
 ul.gospelbar {
-   background-color: #F0E68C;
+   background-color: red;
 
 }
 ul {
@@ -96,13 +96,14 @@ li a {
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      margin-left: 100px;
+      margin-left: 50px;
+      margin-right: 50px;
 }
 
 li.gospelbar a{
- color: white;
- font-family: 'Kirang Haerang', cursive;
- background-color: #F0E68C;
+ color: blue;
+ font-family: 'Times New Roman', cursive;
+ background-color: white;
 }
 
 p{
@@ -111,4 +112,8 @@ p{
 
 h2 {
   color: white;
+}
+
+#tool {
+  margin-left: 70px;
 }
