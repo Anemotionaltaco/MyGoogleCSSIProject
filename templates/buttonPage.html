@@ -12,12 +12,28 @@
 </head>
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-  <button id="signout" type="button" name="button" href="#" onclick="signOut();" style="display: none">Sign Out</button>
+   <button id="signout" type="button" name="button" href="#" onclick="signOut();" style="display: none">Sign Out</button>
+   <div class="split left">
+     <div class="centered">
+       <h1 id="title">CEASAR SALAD:</h1>
+       <h2 id="slogan">THE NEWEST MUSIC RECCOMENDATION APP</h2>
+       <p id="explanation">The search for music has lost its ability to bring people together
+          -- luckily, with CEASAR SALAD, personal reccomendations and the unity of music has become an easy feat.
+         This forum allows users to share music with
+       other fellow users across the globe, add music to Spotify playlists, and much more. Just pick a genre to begin sharing.
+       </p>
 
-  <h1><i class="fa fa-music"></i> Please select a Genre below <i class="fa fa-music"></i></h1>
-  {% for key, value in genres.iteritems() %}
-  <button type="button" class="genres" id="{{key}}" onclick="handleGenreClick('{{key}}')">{{value}}</button>
-  {% endfor %}
+     </div>
+   </div>
+   <div class="split right ">
+   <div class="centeredright">
+     <p>Some text.</p>
+     {% for key, value in genres.iteritems() %}
+     <button type="button" class="genres btn-2" id="{{key}}" onclick="handleGenreClick('{{key}}')">{{value}}</button>
+     {% endfor %}
+     <br>
+   </div>
+
 
   <script>
 
