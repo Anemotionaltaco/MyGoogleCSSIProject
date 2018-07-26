@@ -179,7 +179,7 @@ class GetUserHandler(webapp2.RequestHandler):
           email_address = user.nickname()
           the_user = User.get_by_id(user.user_id())
           signout_link_html = '<a href="%s">sign out</a>' % (
-              users.create_logout_url('/login'))
+              users.create_logout_url('#'))
           # If the user has previously been to our site, we greet them!
           if the_user:
             self.response.write('''
@@ -192,7 +192,7 @@ class GetUserHandler(webapp2.RequestHandler):
           else:
             self.response.write('''
                 Welcome to our site, %s!  Please sign up! <br>
-                <form method="post" action="/">
+                <form method="post" action="/login">
                 <input type="text" name="first_name">
                 <input type="text" name="last_name">
                 <input type="submit">

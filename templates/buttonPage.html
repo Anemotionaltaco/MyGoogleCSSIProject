@@ -10,40 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Limelight|Leckerli+One|Poor+Story|Berkshire+Swash|Sigmar+One|Reenie+Beanie|Special+Elite" rel="stylesheet">
 </head>
-
-
 <body>
+  <form action="/login"  method="post">
 
+  </form>
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
    <button id="signout" type="button" name="button" href="#" onclick="signOut();" style="display: none">Sign Out</button>
-   <nav role="navigation">
-   <div id="menuToggle">
-   <!--
-   A fake / hidden checkbox is used as click reciever,
-   so you can use the :checked selector on it.
-   -->
-   <input type="checkbox" />
-
-   <!--
-   Some spans to act as a hamburger.
-
-   They are acting like a real hamburger,
-   not that McDonalds stuff.
-   -->
-   <span></span>
-   <span></span>
-   <span></span>
-
-   <!--
-   Too bad the menu has to be inside of the button
-   but hey, it's pure CSS magic.
-   -->
-   <ul class="pages" id="menu">
-     <li class="homebar"><a href="/">HOME</a></li>
-     <li class="homebar"><a href="/about">ABOUT</a></li>
-   </ul>
-   </div>
-   </nav>
    <div class="split left">
      <div class="centered">
        <h1 id="title">CEASAR SALAD:</h1>
@@ -58,6 +30,7 @@
    </div>
    <div class="split right ">
    <div class="centeredright">
+     <p>Some text.</p>
      {% for key, value in genres.iteritems() %}
      <button type="button" class="genres btn-2" id="{{key}}" onclick="handleGenreClick('{{key}}')">{{value}}</button>
      {% endfor %}

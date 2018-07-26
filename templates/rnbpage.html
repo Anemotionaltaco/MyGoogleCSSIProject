@@ -42,24 +42,28 @@
     </ul>
     </div>
     </nav>
-      <div class="box" id ="rnbbox">
-      <div class="title" id="rnbtitle">
-         R&B PAGE
-      </div>
-      <input type="button" class="right button rnbbutton"   value="Load Messages">
-      <br>
-      <form class="messagearea" action="/add?genre=rnb" method="post">
-              <input name="home" id="textfield">
-              <input id="rnb" type="submit" class="button rnbbutton" value="send message">
-      </form>
-      </div>
-      <div class="messagearea" id="rnbmessage">
-        {{ messages }}
-
-      <!-- <div class= "gospelbackground playlist" id="rnblist">
-      SONG
-      </div> -->
+    <div class="box" id ="rnbbox">
+    <div class="title" id="rnbtitle">
+       R&B PAGE
     </div>
+    <form action="/messages?genre=rnb" method="post">
+      <input type="submit" class="right button rnbbutton"  value="Load Messages">
+    </form>
+    <br>
+    <form class="messagearea" action="/add?genre=rnb" method="post">
+            <input name="home" id="textfield">
+            <input id="rnb" type="submit" class="button rnbbutton" value="send message">
+
+    </form>
+    </div>
+    <div class="messagearea" id="rnbmessage">
+      {% for text in messages %}
+        <p>{{text}}</p>
+      {% endfor %}
+    <!-- <div class= "gospelbackground playlist" id="rnblist">
+    SONG
+    </div> -->
+  </div>
       <div class= "playlist" id="gospellist">
     <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX7YCknf2jT6s" width="350" height="680" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
