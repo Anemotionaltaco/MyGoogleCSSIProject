@@ -112,25 +112,38 @@ class GetMessageHandler(webapp2.RequestHandler):
         # if Model.genre == "rnb":
 
         query = Model.query()
-        query_rnb = query.filter(Model.genre == "rnb")
-        # query_rnb.order()
-        # print(query_rnb)
-        # 2) make a list of all Model.text property
-        for text in query_rnb:
-            result["messages"].append(text.text)
+
 
         # print(result["messages"])
         if genre == "gospel":
+            query_gospel = query.filter(Model.genre == "gospel")
+            for text in query_gospel:
+                result["messages"].append(text.text)
             genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
         if genre == "hiphop":
+            query_hiphop = query.filter(Model.genre == "hiphop")
+            for text in query_hiphop:
+                result["messages"].append(text.text)
             genre_page = jinja_current_directory.get_template("templates/hiphoppage.html")
         if genre == "indie":
+            query_indie = query.filter(Model.genre == "indie")
+            for text in query_indie:
+                result["messages"].append(text.text)
             genre_page = jinja_current_directory.get_template("templates/indiepage.html")
         if genre == "jazz":
+            query_jazz = query.filter(Model.genre == "jazz")
+            for text in query_jazz:
+                result["messages"].append(text.text)
             genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
         if genre == "pop":
+            query_pop = query.filter(Model.genre == "pop")
+            for text in query_pop:
+                result["messages"].append(text.text)
             genre_page = jinja_current_directory.get_template("templates/poppage.html")
         if genre == "rnb":
+            query_rnb = query.filter(Model.genre == "rnb")
+            for text in query_rnb:
+                result["messages"].append(text.text)
             genre_page = jinja_current_directory.get_template("templates/rnbpage.html")
         # 3) pass the list to a template and render
         print(result["messages"])
