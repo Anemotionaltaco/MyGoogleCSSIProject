@@ -389,48 +389,14 @@ border-color: black;
 text-shadow: 3px 3px #035E7B;
 font-family: 'Yellowtail', cursive;
 } */
-#jazzlist {
-  position: fixed;
-  left: 960px;
-  bottom: 355px;
+.playlist {
+  position: relative;
+  left: 68%;
+  bottom: 75%;
   margin: 5px;
   width: 255px;
   padding: 30px;
 
-}
-
-#gospellist {
-  position: relative;
-  left: 70%;
-  bottom: 80%;
-  margin: 5px;
-  width: 255px;
-  padding: 30px;
-}
-#indielist {
-  position: relative;
-  left: 70%;
-  bottom: 80%;
-  margin: 5px;
-  width: 255px;
-  padding: 30px;
-}
-
-#poplist {
-  position: relative;
-  left: 70%;
-  bottom: 800%;
-  margin: 5px;
-  width: 255px;
-  padding: 30px;
-}
-#rnblist {
-  position: relative;
-  left: 70%;
-  bottom: 80%;
-  margin: 5px;
-  width: 255px;
-  padding: 30px;
 }
 /* #rnblist {
   box-shadow: 3px 3px #CCC9DC;
