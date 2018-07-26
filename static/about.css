@@ -1,35 +1,114 @@
 #us {
     display: flex;
     justify-content: center;
-    margin-right: 250px;
     text-align: center;
     margin-top: 60px;
+    margin-right: 350px;
+
+}
+
+.center {
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }
 
 #brandon {
   margin-right: 70px;
-    border: 3px solid white;
+    border: 3px solid blue;
     width: 280px;
 }
 
 div {
     display: inline-block;
+
 }
 
 #ndunge {
-    margin-right: 70px;
-    border: 3px solid white;
+    margin-right: 100px;
+
+    border: 3px solid green;
     width: 280px;
-    color: red;
 }
 
 #essence {
     margin-right: 70px;
-    border: 3px solid white;
+    border: 3px solid red;
     width: 280px;
-    font-size: 40px;
+}
+
+#title {
+  text-align: center;
+  margin-left: 100px;
+
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+.rainbow {
+  -webkit-animation: rainbow 3s infinite;
 }
 
 body {
-  color: red;
+  background-image: url(http://fjordstudio.dk/assets/img/bg/diamonds.png);
+}
+
+@keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
+}
+
+@-webkit-keyframes rainbow{
+  0%{color: orange;}
+  10%{color: purple;}
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
+}
+ul.gospelbar {
+   background-color: #F0E68C;
+
+}
+ul {
+  list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+border-radius: 15px;
+ }
+ li {
+    float: left;
+ }
+li a {
+  display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-left: 100px;
+}
+
+li.gospelbar a{
+ color: white;
+ font-family: 'Kirang Haerang', cursive;
+ background-color: #F0E68C;
+}
+
+p{
+  color: white;
+}
+
+h2 {
+  color: white;
 }
