@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+#title {
+  position: relative;
+  margin-left: 200px;
+  font-size: 70px;
+  bottom: 305px;
+  color: #C41E3D;
+}
+.split {
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background: url("https://unsplash.com/photos/ERSauUNQ3ag");
+    color: black;
+}
+
+.right {
+    right: 0;
+    background-color: gray;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="split right">
+  <div class="centered">
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<button id="signout" type="button" name="button" href="#" onclick="signOut();" style="display: none">Sign Out</button>
+
+<h1><i class="fa fa-music"></i> Please select a Genre below <i class="fa fa-music"></i></h1>
+{% for key, value in genres.iteritems() %}
+<button type="button" class="genres" id="{{key}}" onclick="handleGenreClick('{{key}}')">{{value}}</button>
+{% endfor %}
+
+<script>
+
+  var isSignedIn = true;
+
+  function onSignIn(googleUser) {
+    // Useful data for your client-side scripts:
+    var profile = googleUser.getBasicProfile();
+    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+    console.log('Full Name: ' + profile.getName());
+    console.log('Given Name: ' + profile.getGivenName());
+    console.log('Family Name: ' + profile.getFamilyName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail());
+
+    // The ID token you need to pass to your backend:
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log("ID Token: " + id_token);
+    // sendRequest("/setUserData", function(result) {
+    //   console.log("Got result", result);
+    // }, {"id_token": id_token});
+    isSignedIn = true;
+    document.getElementById('signout').style.display="block";
+  }
+
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    })
+    isSignedIn = false;
+    document.getElementById('signout').style.display="none"
+  }
+
+  function handleGenreClick(genre) {
+    if(isSignedIn) {
+      location.assign("/genre?genre=" + genre)
+    }
+    else {
+      alert("You need to sign in first.")
+    }
+  };
+</script>
+    <p>Some text.</p>
+  </div>
+</div>
+
+<div class="split left">
+  <div class="centered">
+    <h1 id="title">CEASAR SALAD</h1>
+    <p>Some text here too.</p>
+  </div>
+</div>
+
+</body>
+</html>
