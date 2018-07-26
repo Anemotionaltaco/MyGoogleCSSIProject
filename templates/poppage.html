@@ -3,66 +3,6 @@
   <head>
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Limelight|Leckerli+One|Poor+Story|Berkshire+Swash|Sigmar+One|Reenie+Beanie|Special+Elite" rel="stylesheet">
   <link href="static/style.css" rel="stylesheet">
-    <script>
-  function sendRequest(destinationUrl, callbackFunction, parameters) {
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.onreadystatechange = function() {
-        if(xmlHttp.readyState == 4) {
-          var result = JSON.parse(xmlHttp.responseText);
-          if (result.error) {
-            document.write(result.error);
-          } else {
-            callbackFunction(result);
-            }
-          }
-        }
-      var paramString = "";
-      for (var param in parameters) {
-        paramString += param + "=" + escape(parameters[param]) + "&";
-      }
-      xmlHttp.open("POST", destinationUrl);
-      xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xmlHttp.send(paramString);
-      }
-
-  function handleLoad() {
-    sendRequest("/messages", function(result) {
-      var messageText = "";
-      for (var i = 0; i < result.messages.length; i++) {
-        messageText += '<div class="message">'
-        messageText += '<span class="messageemail">' + result.messages[i].email + '</span>';
-        messageText += " said at ";
-        messageText += result.messages[i].time;
-        messageText += ":<br>";
-        messageText += result.messages[i].text;
-        messageText += "</div>"
-      }
-      document.getElementById("messagearea").innerHTML = messageText;
-    }, new Object());
-  }
-
-  function handleSend() {
-    var parameters = new Object();
-    parameters["text"] = document.getElementById("textfield").value
-    sendRequest("/add", function(result) {
-      document.getElementById("textfield").value = "";
-      handleLoad();
-    }, parameters);
-  }
-  function getUser() {
-    sendRequest("/user", function(result) {
-      if (result.user) {
-        handleLoad();
-      } else {
-        sendRequest("/login", function(result) {
-          var loginLink = '<a href="' + result.url + '">Click here to Log In</a>"'
-          document.getElementById("messagearea").innerHTML = loginLink;
-        }, new Object())
-      }
-    }, new Object());
-  }
-  getUser();
-    </script>
 </head>
 <body class="pop">
   <div>
@@ -75,19 +15,28 @@
       <li class="popbar"><a href="/genre?genre=pop">POP</a></li>
       <li class="popbar"><a href="/genre?genre=hiphop">HIP HOP</a></li>
   </ul>
-    <div class="box" id ="popbox">
-    <div class="title" id="poptitle">
-        POP PAGE
-    </div>
-    <input type="button" class="right button popbutton" value="Load Messages">
-    <br>
-    <input id="textfield">
-    <input type="button" class="button popbutton" value="send message" onclick="handleSend();">
+  <div class="box" id ="popbox">
+  <div class="title" id="poptitle">
+     POP PAGE
   </div>
-    <div class="messagearea" id="popmessage">
-    Hey
-    </div>
+  <form action="/messages?genre=pop" method="post">
+    <input type="submit" class="right button popbutton"  value="Load Messages">
+  </form>
+  <br>
+  <form class="messagearea" action="/add?genre=pop" method="post">
+          <input name="home" id="textfield">
+          <input id="pop" type="submit" class="button popbutton" value="send message">
+
+  </form>
   </div>
+  <div class="messagearea" id="popmessage">
+    {% for text in messages %}
+      <p>{{text}}</p>
+    {% endfor %}
+  <!-- <div class= "gospelbackground playlist" id="rnblist">
+  SONG
+  </div> -->
+</div>
   <div class= "playlist" id="jazzlist">
 <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX7YCknf2jT6s" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
