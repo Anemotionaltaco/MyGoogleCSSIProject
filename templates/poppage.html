@@ -15,19 +15,28 @@
       <li class="popbar"><a href="/genre?genre=pop">POP</a></li>
       <li class="popbar"><a href="/genre?genre=hiphop">HIP HOP</a></li>
   </ul>
-    <div class="box" id ="popbox">
-    <div class="title" id="poptitle">
-        POP PAGE
-    </div>
-    <input type="button" class="right button popbutton" value="Load Messages">
-    <br>
-    <input id="textfield">
-    <input type="button" class="button popbutton" value="send message" onclick="handleSend();">
+  <div class="box" id ="popbox">
+  <div class="title" id="poptitle">
+     POP PAGE
   </div>
-    <div class="messagearea" id="popmessage">
-    Hey
-    </div>
+  <form action="/messages?genre=pop" method="post">
+    <input type="submit" class="right button popbutton"  value="Load Messages">
+  </form>
+  <br>
+  <form class="messagearea" action="/add?genre=pop" method="post">
+          <input name="home" id="textfield">
+          <input id="pop" type="submit" class="button popbutton" value="send message">
+
+  </form>
   </div>
+  <div class="messagearea" id="popmessage">
+    {% for text in messages %}
+      <p>{{text}}</p>
+    {% endfor %}
+  <!-- <div class= "gospelbackground playlist" id="rnblist">
+  SONG
+  </div> -->
+</div>
   <div class= "playlist" id="jazzlist">
 <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX7YCknf2jT6s" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
