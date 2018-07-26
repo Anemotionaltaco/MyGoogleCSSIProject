@@ -17,21 +17,22 @@ jinja_current_directory = jinja2.Environment(
 class Model(ndb.Model):
     genre = ndb.StringProperty()
     text = ndb.TextProperty()
+    date = ndb.DateTimeProperty(auto_now_add=True)
 
-class Message(object):
-    def __init__(self, text):
-        self.text = text
-        self.timestamp = datetime.datetime.now()
-    def to_dict(self):
-        result = {
-            "text": self.text,
-            "timestamp": self.timestamp.strftime("%Y-%m-%d %H-%M-%S")
-        }
-        # if len(self.email) > 10:
-        #     result['email'] = self.email.split("@", 1)[0]
-        # else:
-        #     result['email'] = self.email
-        return result
+# class Message(object):
+#     def __init__(self, text):
+#         self.text = text
+#         self.timestamp = datetime.datetime.now()
+#     def to_dict(self):
+#         result = {
+#             "text": self.text,
+#             "timestamp": self.timestamp.strftime("%Y-%m-%d %H-%M-%S")
+#         }
+#         # if len(self.email) > 10:
+#         #     result['email'] = self.email.split("@", 1)[0]
+#         # else:
+#         #     result['email'] = self.email
+#         return result
 
 
 #HANDLERS
@@ -67,30 +68,28 @@ class GetGenreHandler(webapp2.RequestHandler):
             genre_page = jinja_current_directory.get_template("templates/poppage.html")
         if genre == "rnb":
             genre_page = jinja_current_directory.get_template("templates/rnbpage.html")
-
         self.response.out.write(genre_page.render())
 
 class AddMessageHandler(webapp2.RequestHandler):
     def dispatch(self):
-        result = {}
+        # result = {}
         # email = get_current_user_email()
         genre = self.request.get("genre")
         text = self.request.get("home")
         # Model.genre = self.request.get(genre)
-        if len(text) > 500:
-            result["error"] = "Message is too long."
-        elif not text.strip():
-            result["error"] = "Message is empty."
-        else:
-            messages = memcache.get("messages")
-            if not messages:
-                messages = []
-            msg = Message(text)
-            messages.append(msg)
-            memcache.set("messages", messages)
-            result["OK"] = True
+        # if len(text) > 500:
+        #     result["error"] = "Message is too long."
+        # elif not text.strip():
+        #     result["error"] = "Message is empty."
+        # else:
+        #     messages = memcache.get("messages")
+        #     if not messages:
+        #         messages = []
+        #     msg = Message(text)
+        #     messages.append(msg)
+        #     memcache.set("messages", messages)
+        #     result["OK"] = True
 
-        print(self.request.url)
         m = Model(genre=genre, text=text)
         m.put()
 
@@ -98,6 +97,48 @@ class AddMessageHandler(webapp2.RequestHandler):
 
         # else:
         #     result["error"] = "User is not logged in."
+
+class GetMessageHandler(webapp2.RequestHandler):
+    def dispatch(self):
+        result = {}
+        result["messages"] = []
+        genre = self.request.get("genre")
+        # messages = memcache.get("messages")
+        # if messages:
+        #     for message in messages:
+        #         result["messages"].append(message.to_dict())
+        #
+        # 1) get all Model entries with Model.genre == genre sorted by date
+        # if Model.genre == "rnb":
+
+        query = Model.query()
+        query_rnb = query.filter(Model.genre == "rnb")
+        # query_rnb.order()
+        # print(query_rnb)
+        # 2) make a list of all Model.text property
+        for text in query_rnb:
+            result["messages"].append(text.text)
+
+        # print(result["messages"])
+        if genre == "gospel":
+            genre_page = jinja_current_directory.get_template("templates/gospelpage.html")
+        if genre == "hiphop":
+            genre_page = jinja_current_directory.get_template("templates/hiphoppage.html")
+        if genre == "indie":
+            genre_page = jinja_current_directory.get_template("templates/indiepage.html")
+        if genre == "jazz":
+            genre_page = jinja_current_directory.get_template("templates/jazzpage.html")
+        if genre == "pop":
+            genre_page = jinja_current_directory.get_template("templates/poppage.html")
+        if genre == "rnb":
+            genre_page = jinja_current_directory.get_template("templates/rnbpage.html")
+        # 3) pass the list to a template and render
+        print(result["messages"])
+        self.response.out.write(genre_page.render(messages=result["messages"]))
+
+        # self.redirect("/genre?genre=" + genre)
+        # else:
+        #     result["error"] = "User is not logged in"
 
 
 #
@@ -116,10 +157,10 @@ app = webapp2.WSGIApplication([
     ("/", GetMainPageHandler),
     ("/add", AddMessageHandler),
     ("/genre", GetGenreHandler),
+    ("/messages", GetMessageHandler),
     # ("/setUserData", SetUserDataHandler)
     # ("/gospel", GospelHandler),
     # ("/login", GetLoginUrlHandler),
     # ("/logout", GetLogoutUrlHandler),
-    # ("/messages", GetMessageHandler),
     # ("/user", GetUserHandler)
 ], debug=True)
