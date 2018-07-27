@@ -301,6 +301,18 @@ text-shadow: -2px 2px #FFF8F0;
   text-shadow: -2px 2px black;
   font-family: 'Reenie Beanie', cursive;
 }
+
+.loadbutton {
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 30px;
+  background-repeat:no-repeat;
+     border: none;
+     cursor:pointer;
+  background-color: transparent;
+     outline:none;
+     margin-top: 200px;
+}
 .button {
 padding: 5px;
 border-radius: 15px;
@@ -326,6 +338,8 @@ background-color: transparent;
  text-shadow: 1px 4px #270722;
  color: #CCC9DC;
  font-family: 'Yellowtail', cursive;
+ margin-bottom: 40px;
+ background-color: transparent;
 }
 .rnbbutton {
   text-shadow: 1px 4px #270722;
@@ -392,7 +406,7 @@ font-family: 'Yellowtail', cursive;
 .playlist {
   position: relative;
   left: 68%;
-  bottom: 75%;
+  bottom: 85%;
   margin: 5px;
   width: 255px;
   padding: 30px;
