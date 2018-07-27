@@ -1,0 +1,434 @@
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.pages {
+  font-size: 50px;
+  margin: 50px;
+  padding: 20px;
+
+}
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+body.jazz {
+   background-color: #2A2B2E;
+ }
+ body.rnb {
+   background-color: #51291E
+ }
+ body.gospel {
+   background-color: #E1EFE6;
+ }
+ body.indie {
+   background-color: #846A6A;
+ }
+ body.hiphop {
+   background-color: #F6BD60;
+ }
+ body.pop {
+   background-color: #F49390;
+ }
+ ul.gospelbar {
+    background-color: #E1EFE6;
+
+ }
+ ul.indiebar {
+    background-color: #846A6A;
+
+ }
+ ul.hiphopbar {
+   background-color: #270722;
+   border-radius: 15px;
+ }
+ ul.jazzbar {
+   background-color: #2A2B2E;
+ }
+
+ ul.popbar {
+   background-color: #F0E68C	;
+ }
+
+ul.rnbbar {
+  background-color: black;
+}
+ul {
+  list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+border-radius: 15px;
+ }
+ li {
+    float: left;
+ }
+li a {
+  display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin-left: 100px;
+
+}
+
+li.gospelbar a{
+ color: #270722;
+ font-family: 'Fjalla One', sans-serif;
+ background-color: #E1EFE6;
+}
+
+li.indiebar a{
+ color: black;
+  font-family: 'Josefin Slab', serif;
+
+}
+
+li.hiphopbar a{
+ color: black;
+ font-family: 'Poor Story', cursive
+}
+li.jazzbar a {
+color: black;
+font-family: 'Josefin Sans', sans-serif, italic;
+}
+
+li.popbar a{
+  font-family: 'Reenie Beanie', cursive;
+  color: black;
+}
+li.rnbbar a{
+  font-family: 'Berkshire Swash', cursive;
+}
+.right {
+position: absolute;
+left:610px;
+width: 300px;
+padding: 10px;
+top: 345px;
+
+}
+#gospelbox {
+ background: linear-gradient( rgba(255,0,0,0), lightgray);
+ /* box-shadow: 3px 3px #000411; */
+}
+
+#jazzbox {
+background: linear-gradient( rgba(255,0,0,0), #4a4c51);
+/* box-shadow: 3px 3px #CCC9DC; */
+}
+#indiebox {
+background: linear-gradient( rgba(255,0,0,0), #9e8080);
+  /* box-shadow: 3px 3px #CCDAD1; */
+}
+#rnbbox {
+  background-color: #581908;
+  box-shadow: 3px 3px #000411;
+}
+
+#hiphopbox {
+  background-color: #E9190F;
+  box-shadow: 3px 3px #000411;
+}
+
+#popbox {
+  background-color: #E40066;
+  box-shadow: 3px 3px #000411;
+}
+
+.box {
+padding: 85px;
+border-radius: 10px;
+width: 800px
+}
+
+.title {
+font-size:90px;
+position: relative;
+left: 10px;
+top: -50px;
+}
+
+#hiphoptitle {
+  font-family: 'Poor Story', cursive;
+  text-shadow: -2px 2px #D6DBB2;
+}
+#rnbtitle{
+  font-family: 'Berkshire Swash', cursive;
+  color: #E3D985;
+  text-shadow: -2px 2px #D6DBB2;
+}
+
+#jazztitle {
+font-family: 'Josefin Sans', sans-serif, italic;
+color: #CCC9DC;
+text-shadow: -2px 2px black;
+}
+#gospeltitle {
+color: #270722;
+font-family: 'Fjalla One', sans-serif;
+text-shadow: -2px 2px #FFF8F0;
+}
+#indietitle {
+  font-family: 'Fredericka the Great', cursive;
+  color: #CCDAD1;
+  text-shadow: -2px 2px #73877B;
+}
+#poptitle {
+  color: #F0E68C;
+  text-shadow: -2px 2px black;
+  font-family: 'Reenie Beanie', cursive;
+}
+.button {
+padding: 5px;
+border-radius: 15px;
+font-size: 30px;
+background-repeat:no-repeat;
+   border: none;
+   cursor:pointer;
+background-color: transparent;
+   outline:none;
+}
+.gospelbutton {
+ text-shadow: 1px 4px rgb(225, 239, 230);
+ font-family: 'Pacifico', cursive;
+ background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+background-color: transparent;
+    outline:none;
+ color: 270722;
+}
+
+.jazzbutton {
+ text-shadow: 1px 4px #270722;
+ color: #CCC9DC;
+ font-family: 'Yellowtail', cursive;
+}
+.rnbbutton {
+  text-shadow: 1px 4px #270722;
+  font-family: 'Pacifico', cursive;
+  border-color: #035E7B;
+  background-color: #D6DBB2;
+  color: white;
+  font-family: 'Berkshire Swash', cursive;
+}
+.indiebutton {
+  font-family: 'Josefin Slab', serif;
+
+}
+.hiphopbutton {
+  font-family: 'Poor Story', cursive;
+  text-shadow: 1px 4px white;
+  border-color: #035E7B;
+  background-color: #F6BD60;
+
+}
+.gospelmessage {
+font-family:'Pacifico', cursive;
+color: #270722;
+}
+
+.popbutton {
+  font-family: 'Reenie Beanie', cursive;
+  color: #F0E68C;
+  text-shadow: 1px 4px #270722;
+  background-color: black;
+}
+
+#jazzmessage {
+color: #CCC9DC;
+font-family: 'Josefin Sans', sans-serif, italic;
+}
+#rnbmessage {
+  color: #E3D985;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+#hiphopmessage {
+  font-family: 'Poor Story', cursive;
+  color: #291F1E;
+}
+#indiemessage {
+  color: #CCDAD1;
+  font-family: 'Fredericka the Great', cursive;
+  text-shadow: 1px 2px black;
+}
+
+.messagearea {
+padding: 50px;
+font-size: 30px;
+}
+
+/* #jazzlist {
+box-shadow: 3px 3px #CCC9DC;
+color: CCC9DC;
+border-color: black;
+text-shadow: 3px 3px #035E7B;
+font-family: 'Yellowtail', cursive;
+} */
+#jazzlist {
+  position: fixed;
+  left: 960px;
+  bottom: 355px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+
+}
+
+#gospellist {
+  position: fixed;
+  left: 960px;
+  bottom: 42px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+}
+
+#indielist {
+  position: relative;
+  left: 70%;
+  bottom: 70%;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+}
+
+#rnblist {
+  position: fixed;
+  left: 960px;
+  bottom: 602px;
+  margin: 5px;
+  width: 255px;
+  padding: 30px;
+}
+/* #rnblist {
+  box-shadow: 3px 3px #CCC9DC;
+  color:#E3D985;
+  border-color: black;
+  text-shadow: 3px 3px #270722;
+  font-family: 'Berkshire Swash', cursive;
+} */
